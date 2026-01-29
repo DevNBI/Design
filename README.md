@@ -23,4 +23,4 @@ We wish to thank all who have created the icons that we use (designers and edito
 ---
 
 ### Live Previewing
-To view the contents of this repository in a more visual form, visit the website [here](https://devnbi.github.io/Design)
+To view the contents of this repository in a more visual form, visit the website [here](https://devnbi.github.io/Design).
