@@ -1,0 +1,101 @@
+:root {
+    --bg: #11111B;
+    --body-main: #181825;
+    --body-secondary: #1E1E2E;
+    --nav: #181825;
+    --footer: #181825;
+    --surface: #313244;
+    --button: #80859C;
+    --border: #C4A7E7;
+    --header-text: #C4A7E7;
+    --subheader-text: #5E6177;
+    --text: #FFFFFF;
+    --fine-text: #64577A;
+    --link: #C4A7E7;
+    --highlight: #7B8198;
+    --scrollbar: #C4A7E7;
+}
+
+html,
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+main {
+    background: var(--body-main);
+}
+
+section,
+article {
+    background: var(--body-secondary);
+}
+
+nav {
+    background: var(--nav);
+}
+
+footer {
+    background: var(--footer);
+}
+
+.card,
+.bar,
+.menu,
+.dropdown,
+.context-menu {
+    background: var(--surface);
+}
+
+input,
+textarea,
+select {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+button {
+    background: var(--button);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-text);
+}
+
+.subtitle,
+.subheader {
+    color: var(--subheader-text);
+}
+
+small,
+.fine-print {
+    color: var(--fine-text);
+}
+
+a {
+    color: var(--link);
+}
+
+::selection {
+    background: var(--highlight);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+}
