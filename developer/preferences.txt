@@ -24,4 +24,4 @@ Scrollbar Colour: #C4A7E7
 Icon Colour: #EDBDED
 
 Element Width: 98%
-Corner Radius: 20PX
+Corner Radius: 16PX
