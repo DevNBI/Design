@@ -21,7 +21,7 @@ Hyperlink Text Colour:
 Highlight Colour:
 Scrollbar Colour:
 
-Icon Colour:
+Icon Colour: #EDBDED
 
 Element Width: 98%
 Corner Radius: 20PX
