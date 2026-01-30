@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Please Wait...</title>
+<link rel="icon" type="image/png" href="https://devnbi.github.io/Design/assets/media/branding/logo.png">
+
+<style>
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #141414;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loader {
+    width: 70px;
+    height: 70px;
+}
+
+h3 {
+    margin: 20px 0 6px 0;
+    color: #EDBDED;
+    font-weight: 600;
+}
+
+.subtext {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+    color: #9E9E9E;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .loader {
+        width: 56px;
+        height: 56px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    .subtext {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 11px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+    <svg class="loader" viewBox="0 0 100 100">
+        <circle
+            cx="50"
+            cy="50"
+            r="43"
+            fill="none"
+            stroke="#EDBDED"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-dasharray="190 55">
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 50 50"
+                to="360 50 50"
+                dur="1s"
+                repeatCount="indefinite">
+            </animateTransform>
+        </circle>
+    </svg>
+
+    <h3>NexusByte Initiative</h3>
+    <div class="subtext">Please wait...</div>
+</div>
+
+<div class="footer">
+    © NexusByte Initiative 2026. All Rights Reserved.
+</div>
+
+<script>
+setTimeout(() => {
+    window.location.href = 'https://devnbi.github.io/Design/main/home.html';
+}, 3000);
+</script>
+</body>
+</html>
