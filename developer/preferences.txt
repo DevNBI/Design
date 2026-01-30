@@ -1,25 +1,25 @@
 When working on projects or developments, please refer to these preferences.
 
-Background Colour:
-Main Body Colour:
-Secondary Body Colour:
-Navigation Colour:
-Footer Colour:
-Card Colour:
-Bar Colour:
-Input Bar Colour:
-Menu Colour:
-Dropdown Colour:
-Context Menu Colour:
-Button Colour:
-Border Colour:
-Header Text Colour:
-Sub-Header Text Colour:
-Regular Text Colour:
-Fine Print Text Colour:
-Hyperlink Text Colour:
-Highlight Colour:
-Scrollbar Colour:
+Background Colour: #11111B
+Main Body Colour: #181825
+Secondary Body Colour: #1E1E2E
+Navigation Colour: #181825
+Footer Colour: #181825
+Card Colour: #313244
+Bar Colour: #313244
+Input Bar Colour: #313244
+Menu Colour: #313244
+Dropdown Colour: #313244
+Context Menu Colour: #313244
+Button Colour: #80859C
+Border Colour: #C4A7E7
+Header Text Colour: #C4A7E7
+Sub-Header Text Colour: #5E6177
+Regular Text Colour: #FFFFFF
+Fine Print Text Colour: #64577A
+Hyperlink Text Colour: #C4A7E7
+Highlight Colour: #7B8198
+Scrollbar Colour: #C4A7E7
 
 Icon Colour: #EDBDED
 
