@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheets</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: #11111B;
+            color: #FFFFFF;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            width: 98%;
+            min-height: 98vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 0;
+        }
+
+        .open-btn {
+            padding: 16px 32px;
+            border-radius: 16px;
+            background: #80859C;
+            color: #FFFFFF;
+            border: 1px solid #C4A7E7;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .open-btn:hover {
+            background: #8B90A6;
+        }
+
+        .sheet-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s;
+        }
+
+        .sheet {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: -100%;
+            background: #313244;
+            border-radius: 16px 16px 0 0;
+            border-top: 1px solid #C4A7E7;
+            transition: bottom 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 12px 16px 20px;
+        }
+
+        .sheet-handle {
+            width: 48px;
+            height: 5px;
+            background: #7B8198;
+            border-radius: 999px;
+            margin: 6px 0 14px;
+        }
+
+        .options {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .option span {
+            color: #FFFFFF;
+            font-size: 15px;
+        }
+
+        .check {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: 2px solid #C4A7E7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .check::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #C4A7E7;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .check.active::after {
+            opacity: 1;
+        }
+
+        .sheet-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .sheet.active {
+            bottom: 0;
+        }
+
+        @media (max-width: 600px) {
+            .option span {
+                font-size: 14px;
+            }
+
+            .open-btn {
+                padding: 14px 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <button class="open-btn">Open Menu</button>
+    </div>
+
+    <div class="sheet-overlay"></div>
+
+    <div class="sheet">
+        <div class="sheet-handle"></div>
+        <div class="options">
+            <div class="option">
+                <span>Option One</span>
+                <div class="check"></div>
+            </div>
+            <div class="option">
+                <span>Option Two</span>
+                <div class="check"></div>
+            </div>
+            <div class="option">
+                <span>Option Three</span>
+                <div class="check"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.querySelector('.open-btn');
+        const sheet = document.querySelector('.sheet');
+        const overlay = document.querySelector('.sheet-overlay');
+        const handle = document.querySelector('.sheet-handle');
+
+        openBtn.onclick = () => {
+            sheet.classList.add('active');
+            overlay.classList.add('active');
+        };
+
+        const close = () => {
+            sheet.classList.remove('active');
+            overlay.classList.remove('active');
+        };
+
+        overlay.onclick = close;
+        handle.onclick = close;
+
+        document.querySelectorAll('.check').forEach(c => {
+            c.onclick = () => c.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
