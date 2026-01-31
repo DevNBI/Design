@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent
+}
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background:#11111B;
+    color:#FFFFFF;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu
+}
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+.page{
+    width:98%;
+    min-height:98vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    padding:32px 0
+}
+.center{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    gap:14px
+}
+.center h3{
+    margin:0;
+    color:#C4A7E7;
+    letter-spacing:.4px
+}
+.center p{
+    margin:0;
+    color:#FFFFFF;
+    max-width:620px;
+    opacity:.9
+}
+.grid{
+    margin-top:28px;
+    width:98%;
+    max-width:720px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px
+}
+.grid a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:56px;
+    padding:0 16px;
+    border-radius:16px;
+    background:#80859C;
+    color:#FFFFFF;
+    text-decoration:none;
+    border:1px solid #C4A7E7;
+    white-space:nowrap;
+    transition:background-color .2s,opacity .2s
+}
+.grid a:hover{
+    background:#8B90A6;
+    opacity:.95
+}
+.grid a:active{
+    background:#777C92
+}
+.footer{
+    padding:20px 0;
+    color:#64577A;
+    font-size:13px;
+    text-align:center;
+    letter-spacing:.3px
+}
+::-webkit-scrollbar{
+    width:8px
+}
+::-webkit-scrollbar-thumb{
+    background:#C4A7E7;
+    border-radius:16px
+}
+@media(max-width:720px){
+    body{
+        align-items:flex-start
+    }
+    .page{
+        min-height:auto;
+        padding:24px 0
+    }
+    .center{
+        justify-content:flex-start
+    }
+    .grid{
+        grid-template-columns:1fr;
+        max-width:100%
+    }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div></div>
+<div class="center">
+<h3>Design</h3>
+<p>Colour palette and elements we use universally.</p>
+<div class="grid">
+<a href="https://devnbi.github.io/Design/main/colour-palette.html" target="_blank">Colour Palette</a>
+<a href="https://devnbi.github.io/Design/main/elements/navigation/top-navigation.html" target="_blank">Top Navigation</a>
+<a href="https://devnbi.github.io/Design/main/elements/navigation/left-navigation.html" target="_blank">Left Navigation</a>
+<a href="https://devnbi.github.io/Design/main/elements/navigation/right-navigation.html" target="_blank">Right Navigation</a>
+<a href="https://devnbi.github.io/Design/main/elements/navigation/bottom-navigation.html" target="_blank">Bottom Navigation</a>
+<a href="https://devnbi.github.io/Design/main/elements/footer/simple-footer.html" target="_blank">Simple Footer</a>
+<a href="https://devnbi.github.io/Design/main/elements/footer/detailed-footer.html" target="_blank">Detailed Footer</a>
+<a href="https://devnbi.github.io/Design/main/elements/animations.html" target="_blank">Animations</a>
+<a href="https://devnbi.github.io/Design/main/elements/buttons.html" target="_blank">Buttons</a>
+<a href="https://devnbi.github.io/Design/main/elements/menus.html" target="_blank">Menus</a>
+<a href="https://devnbi.github.io/Design/main/elements/sheets.html" target="_blank">Sheets</a>
+</div>
+</div>
+<div class="footer">© NexusByte Initiative 2026. All Rights Reserved.</div>
+</div>
+</body>
+</html>
